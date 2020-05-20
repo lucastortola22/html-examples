@@ -1,0 +1,99 @@
+/*RESET*/
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    align-items: center;
+    background-color: #0e1446;
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.clock{
+    align-items: center;
+    background-image: url('../img/clock-gold.png');
+    background-size: cover;
+    border: 4px solid #091921;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+                inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+                0 15px 15px rgba(0, 0, 0, 0.3),
+                inset 0 15px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    height: 360px;
+    width: 360px;
+
+}
+
+.clock:before{
+    background-color: #fff;
+    border-radius: 50%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    width: 15px;
+    z-index: 100;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec{
+    position: absolute;
+}
+.clock .hour .p-hr{
+    width: 160px;
+    height: 160px;
+}
+
+.clock .min, .p-min{
+    width: 190px;
+    height: 190px;
+}
+
+.clock .sec, .p-sc{
+    width: 230px;
+    height: 230px;
+}
+
+.p-hr, .p-min, .p-sc{
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+.p-hr:before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background-color: #ff105e;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.p-min:before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background-color: #fff;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+.p-sc:before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background-color: #fff;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
